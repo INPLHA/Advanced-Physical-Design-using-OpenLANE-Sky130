@@ -26,6 +26,13 @@ run_synthesis
 
 ## Synthesis results 
 ![synthesis results](https://user-images.githubusercontent.com/96485068/183237144-473033ef-7c09-4a72-a6e3-e06b3abdd678.jpeg)
+### Number of cells - 14876 
+### Total Number of flops - 1613
+### Flop count = Total Number of flops/ Number of cells =0.1084 
+### ~ 10.84% of flops used 
+### Buffer count - 1656
+### Buffer count = No. of buffer/Number of cell  = 0.1113 
+### ~ 11.13 %
 
 
 

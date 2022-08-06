@@ -92,5 +92,46 @@ run_placement
 
 
 
+# DAY 3 library cell in  Magic Layout and ngspice characterization
 
+ open floorplan by 
+```bash
+
+ less floorplan.tcl
+ ```
+
+![image](https://user-images.githubusercontent.com/96485068/183238687-02e90a3a-1035-498b-bf21-3be740ce212e.png)
+Copy    ::env (FP IO MODE)
+In openlane terminal
+```bash
+set ::env (FP IO MODE) 2
+```
+
+![image](https://user-images.githubusercontent.com/96485068/183238750-cb3a8900-7ca9-4e00-9b4b-76b007a135af.png)
+
+```bash
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+```
+## Get the open sourced inverter layout. 
+![image](https://user-images.githubusercontent.com/96485068/183238830-d7fcf16f-8fd9-4c36-9871-25b5f0d46c84.png)
+
+![image](https://user-images.githubusercontent.com/96485068/183238889-21fd6659-02ed-4f19-aac0-af0a4bd0a940.png)
+
+
+### In the tkcon terminal of magic
+```bash
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+extracts all the parasitics
+The spice file created will be deafault, change with proper node naming.
+![image](https://user-images.githubusercontent.com/96485068/183239020-1bf0f936-32ad-4280-b0b5-990e01cee4a6.png)
+```bash ngspice sky130_inv.spice
+```
+![image](https://user-images.githubusercontent.com/96485068/183239069-eee3c1e4-66ea-48e5-8275-df392be47bcf.png)
+### Rise transition=64ps
+### Cell rise delay about 60.8ps
+### Fall transision =43ps
+### Cell fall delay =28ps
 

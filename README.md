@@ -14,4 +14,5 @@ My takeaways from the 5 days workshop
  run_floorplan
  run_placement
  ! [less floorplan.tcl]()
- 
+ ![image](https://user-images.githubusercontent.com/96485068/183236344-b2060234-5fe0-4bcc-99ef-b253a38b2100.png)
+

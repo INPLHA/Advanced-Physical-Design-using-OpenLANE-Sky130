@@ -205,7 +205,37 @@ slack can be reduced by increasing the area and by changing the same in the base
 
 
 
+# Day 5 Final steps for RTL2GDS
+The routed files and magic layout are
+![image](https://user-images.githubusercontent.com/96485068/183453223-04fe19ae-fc5f-4bd1-b06d-54c8f4153772.png)
 
+Earlier back in 2020 the openlane had the following steps
+```shell
+package require openlane 0.9
+prep -design <design> -tag <tag> -overwrtie
+run_synthesis
+run_floorplan
+run_placement
+run_cts
+gen_pdn
+run_routing
+```
+
+New version steps, are as follows
+```shell
+package require openlane 0.9
+prep -design <design> -tag <tag> -overwrtie
+run_synthesis
+init_floorplan
+place_io
+global_placement_or
+detailed_placement
+tap_decap_or
+detailed_placement
+run_cts
+gen_pdn
+run_routing
+```
 
 
 

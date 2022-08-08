@@ -1,19 +1,6 @@
 ### Advanced-Physical-Design-using-OpenLANE-Sky130
 My takeaways from the 5 days workshop
-
-# Table of Contents
-
-  - [Day 1 - Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK](#Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK)
-    - [Invoking Openlane](#Invoking Openlane)
-    - [To run synthesis](#To run synthesis)
-    - [Flop count ](#Flop count )
-
-
-
-
-
-
-
+Browse throught he README by selecteing the little icon on 
 
 
 # DAY 1 Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK
@@ -151,3 +138,36 @@ The spice file created will be deafault, change with proper node naming.
 ### Fall transision =43ps
 ### Cell fall delay =28ps
 
+
+DAY 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# References
+  - RISC-V: https://riscv.org/
+  - VLSI System Design: https://www.vlsisystemdesign.com/
+  - OpenLANE: https://github.com/The-OpenROAD-Project/OpenLane
+
+# Acknowledgement
+  - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+  - [Nickson Jose](https://github.com/nickson-jose)

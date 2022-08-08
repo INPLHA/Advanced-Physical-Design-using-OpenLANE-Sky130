@@ -1,5 +1,21 @@
 ### Advanced-Physical-Design-using-OpenLANE-Sky130
 My takeaways from the 5 days workshop
+
+# Table of Contents
+
+  - [Day 1 - Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK](#Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK)
+    - [Invoking Openlane](#Invoking Openlane)
+    - [To run synthesis](#To run synthesis)
+    - [Flop count ](#Flop count )
+
+
+
+
+
+
+
+
+
 # DAY 1 Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK
 
 Introduction to Openlane 

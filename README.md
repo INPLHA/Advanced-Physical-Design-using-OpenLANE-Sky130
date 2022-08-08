@@ -139,7 +139,69 @@ The spice file created will be deafault, change with proper node naming.
 ### Cell fall delay =28ps
 
 
-DAY 4
+
+# DAY 4 Pre layout Timing analysis & need of good clock tree.
+
+## Things to note before routing
+#### The inverter cloned from github earlier has already made the ports but still this can be verified by following the necessary steps
+### 1. Input & Outut port must lie on the intersection of vertical & horizontal tracks
+![image](https://user-images.githubusercontent.com/96485068/183433685-53fc5fa9-ad53-4fa3-9e34-b7db3f172367.png)
+
+### 2.Widths of standard cell  must be odd multiple of track pitch.
+![image](https://user-images.githubusercontent.com/96485068/183443638-218bc46c-7df9-4666-9b48-a6955a193eaa.png)
+### 3. Height of standard cell must be odd multiple of track verticle pitch.
+![image](https://user-images.githubusercontent.com/96485068/183443985-da16dae1-7e7d-4493-9ffa-7bfec12355cd.png)
+### Ensuring the grid are matched according the metal pitch and offset.
+![image](https://user-images.githubusercontent.com/96485068/183444218-d40bfda5-4cfa-4b5c-ba5b-21cab7d6ccf6.png)
+![image](https://user-images.githubusercontent.com/96485068/183432814-2d2a32bc-edfc-4512-9645-075bf1f92600.png)
+To create a input /output port.
+![image](https://user-images.githubusercontent.com/96485068/183446813-3b2c5c7b-75ef-493e-9d6c-96d32bbb1f21.png)
+### LEF file extracts as pin (ports) which are then usful in routing.
+In the magic terminal 
+```shell
+write sky130_vsdinv.lef
+```
+Creates
+![image](https://user-images.githubusercontent.com/96485068/183444786-17d22e96-1fd6-4ad3-9b50-42c98356e51f.png)
+### Copy the LEF file from the mag dir to the working src of picorv32a
+### Copy all the standard typical fast and slow type file of sky130 into src of picorv32a.
+![image](https://user-images.githubusercontent.com/96485068/183445550-046a0991-5838-4ad8-be66-335e681400f7.png)
+The inverter cell has been successfully added to the picorv32a and the same can be verified by the routing rules.
+#### In magic to view layout only the LEF prompt.
+```shell
+expand
+```
+![image](https://user-images.githubusercontent.com/96485068/183449311-6b15d298-dd69-4eeb-afd9-62794e33ef2d.png)
+
+Invoke the openlane run the same synthesis on existing file created before by
+```shell
+docker
+./flow.tcl interactive
+package require openlane 0.9
+prep -design picorv32a -tag <workingfolder> -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+```
+![image](https://user-images.githubusercontent.com/96485068/183448595-ea9cb64c-b8df-4567-aa17-e925052ad64d.png)
+To run floorplan, placement,routing and cts follow the below hint.
+![image](https://user-images.githubusercontent.com/96485068/183447903-77163287-faec-4ff3-a8a4-ae99b61d3303.png)
+![image](https://user-images.githubusercontent.com/96485068/183449894-7c3c53bb-62de-4a61-ae91-e5c1893b2a8c.png)
+### STA analysis
+In the openlane , open openroad to run the sta with real clock
+and edit by adding higher order buffer for less slack
+```shell
+replace_cell <cell number> <celltype_>
+```
+example 
+```shell
+replace_cell _13361_ sky130_fd_sc_hd__buf_16
+```
+replaces buffer of any size to 16
+report
+
+slack can be reduced by increasing the area and by changing the same in the base.sdc file
+![image](https://user-images.githubusercontent.com/96485068/183451316-df94483a-f608-413d-aaa4-c6a4ee48030f.png)
 
 
 

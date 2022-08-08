@@ -1,7 +1,10 @@
 ### Advanced-Physical-Design-using-OpenLANE-Sky130
 My takeaways from the 5 days workshop
 Browse throught he README by selecteing the little icon on 
-
+For the Introduction on how to get started with openlane follow
+```shell
+https://www.udemy.com/course/vsd-a-complete-guide-to-install-openlane-and-sky130nm-pdk/
+```
 
 # DAY 1 Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK
 

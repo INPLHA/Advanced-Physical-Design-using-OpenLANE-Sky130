@@ -1,12 +1,12 @@
 ### Advanced-Physical-Design-using-OpenLANE-Sky130
 My takeaways from the 5 days workshop
 ---
-###TABLE OF CONTENT
-- [Day 1](#Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK)
-- [Day 2](#How to floorplan and Introduction to Library cells)
-- [Day 3](#library cell in  Magic Layout and ngspice characterization)
-- [Day 4](#Pre layout Timing analysis & need of good clock tree)
-- [Day 5](#Final steps for RTL2GDS)
+## TABLE OF CONTENT
+- [Day 1](# Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK)
+- [Day 2](# How to floorplan and Introduction to Library cells)
+- [Day 3](# library cell in  Magic Layout and ngspice characterization)
+- [Day 4](# Pre layout Timing analysis & need of good clock tree)
+- [Day 5](# Final steps for RTL2GDS)
 
 ---
 

@@ -1,6 +1,15 @@
 ### Advanced-Physical-Design-using-OpenLANE-Sky130
 My takeaways from the 5 days workshop
-Browse throught he README by selecteing the little icon on 
+###TABLE OF CONTENT
+- [Day 1](#Kickstart with open-source EDA, OpenLANE and Google Sky130 PDK)
+- [Day 2](#How to floorplan and Introduction to Library cells)
+- [Day 3](#library cell in  Magic Layout and ngspice characterization)
+- [Day 4](#Pre layout Timing analysis & need of good clock tree)
+- [Day 5](#Final steps for RTL2GDS)
+
+---
+
+
 For the Introduction on how to get started with openlane follow
 ```shell
 https://www.udemy.com/course/vsd-a-complete-guide-to-install-openlane-and-sky130nm-pdk/

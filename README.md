@@ -10,6 +10,7 @@ My takeaways from the 5 days workshop
 
 ---
 
+![rtl2gds](https://user-images.githubusercontent.com/96485068/201520249-00daba0f-2a78-46b0-a177-2303975d483e.png)
 
 For the Introduction on how to get started with openlane follow
 ```shell
